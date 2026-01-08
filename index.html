@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Greeting App</title>
+</head>
+<body style="text-align:center; font-family:Arial; margin-top:50px;">
+
+    <h1>Greeting App 🌟</h1>
+
+    <input type="text" id="nameInput" placeholder="Enter your name">
+    <br><br>
+
+    <button onclick="greetUser()">Greet Me</button>
+
+    <h2 id="message"></h2>
+
+    <script>
+        function greetUser() {
+            var name = document.getElementById("nameInput").value;
+
+            var messages = [
+                "Have a great day!",
+                "Keep shining today!",
+                "You are doing amazing!",
+                "Stay positive and happy!",
+                "Good luck with everything!"
+            ];
+
+            var randomIndex = Math.floor(Math.random() * messages.length);
+            var randomMessage = messages[randomIndex];
+
+            document.getElementById("message").innerHTML =
+                "Hello, " + name + "! " + randomMessage;
+        }
+    </script>
+
+</body>
+</html>
